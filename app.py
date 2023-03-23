@@ -6,8 +6,8 @@ import json
 app = Flask(__name__)
 
 # Configurar los tokens y claves necesarios
-VERIFY_TOKEN = os.environ.get('secret')
-PAGE_ACCESS_TOKEN = os.environ.get('EAAIjI4ZBs4BIBAOjb55btaqXmGVhqQXl06W1WNDfOamm2NnVZAuCx1IIDBzBFSVIWdZByZAu8ZCjqbZBeD0qpCE9WOSqqYkSaEJVvlh8PHpNAvwNxt2PbUT9ZAMZAWzzhe64klJt7VGmcgfsFnpkw8q9Nck5P90UVH1T6ylgZAJZC4sPHCDjgDQogkNKeSZBiEkI1kZD')
+VERIFY_TOKEN = os.environ.get(VERIFY_TOKEN)
+PAGE_ACCESS_TOKEN = os.environ.get(PAGE_ACCESS_TOKEN)
 
 # Endpoint para el webhook de Facebook
 @app.route('/webhook', methods=['GET', 'POST'])
