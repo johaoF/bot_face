@@ -15,8 +15,7 @@ def webhook():
     if request.method == 'GET':
         # Verificar el token de verificación
         if request.args.get('hub.verify_token') == VERIFY_TOKEN:
-            return 'token valido'
-            #return request.args.get('hub.challenge')
+            return request.args.get('hub.challenge')
         else:
             return 'Invalid verification token'
     elif request.method == 'POST':
